@@ -1,0 +1,43 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+a {
+  text-decoration: none;
+  color: #666;
+}
+ul,
+ol,
+li {
+  list-style: none;
+}
+img {
+  width: 100%;
+  vertical-align: middle;
+  border: none;
+}
+input {
+  border: none;
+  outline: none;
+}
+em,
+i {
+  font-style: normal;
+}
+@font-face {
+  font-family: "iconfont";
+  src: url("../fonts/iconfont.ttf") format("truetype");
+}
+.iconfont {
+  font-family: "iconfont" !important;
+  font-style: normal;
+  font-weight: normal;
+  font-display: block;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}

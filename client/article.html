@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>文章页</title>
+    <!-- 导入基础样式 -->
+    <link rel="stylesheet" href="css/base.css" />
+    <!-- 导入公共样式 -->
+    <link rel="stylesheet" href="css/common.css" />
+    <!-- 导入文章页样式 -->
+    <link rel="stylesheet" href="css/article.css" />
+    <!-- 导入axios模块 -->
+    <script src="js/axios.js"></script>
+    <!-- 导入弹窗模块 -->
+    <script src="js/alert.js"></script>
+  </head>
+  <body>
+    <div class="wrap">
+      <div class="top">
+        <a href="index.html" class="left">泠羽博客</a>
+        <div class="right">
+          <a href="user.html" class="face">
+            <img src="../node/public/upload/face.png" alt="" />
+            <span class="nickname">游客</span>
+          </a>
+          <ul class="panel">
+            <li><a href="user.html">个 人 中 心</a></li>
+            <li><a href="publish.html">文 章 发 布</a></li>
+            <li><a href="manage.html">文 章 管 理</a></li>
+            <li><a href="collect.html">我 的 收 藏</a></li>
+            <li><a href="follow.html">我 的 关 注</a></li>
+            <li class="exit"><a href="javascript:;">退 出 登 录</a></li>
+          </ul>
+        </div>
+        <div class="none">
+          <a href="login.html">登录</a>
+          <a href="register.html">注册</a>
+        </div>
+      </div>
+      <div class="main">
+        <div class="info" data-id="">
+          <div class="author_pic">
+            <img src="../node/public/upload/face.png" alt="" />
+          </div>
+          <div class="author">文章作者</div>
+          <button class="follow btn" data-code="0">关注</button>
+          <span class="time">发布时间：<i>2023-7-4</i></span>
+        </div>
+        <div class="card">
+          <div class="article">
+            <div class="title">文章标题</div>
+            <div class="cover">
+              <img src="../node/public/upload/article.jpeg" alt="" />
+            </div>
+            <div class="content"></div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="toolbar">
+            <div class="icon">
+              <i class="iconfont praise" data-code="0">&#xe83e;</i>
+              <p>点赞</p>
+              <span class="praiseNum">(0)</span>
+            </div>
+            <div class="icon">
+              <i class="iconfont collect" data-code="0">&#xe83a;</i>
+              <p>收藏</p>
+              <span class="collectNum">(0)</span>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="comment">
+            <div class="comment-title">发布评论</div>
+            <ul class="comment-list">
+              <!-- <li>
+                <div class="empty">还 没 有 评 论</div>
+              </li> -->
+              <!-- <li>
+                <div class="comment-face faceStyle">
+                  <img src="../node/public/upload/face.png" alt="" />
+                </div>
+                <div class="comment-name nameStyle">用户</div>
+                <div class="comment-content">
+                  评论评论评论评论评论评论评论评论评论评论评论评论评论评论评论评论评论评论评论评论评论评论评论评论评论评论评论评论评论评论评论评论评论评论评论评论评论评论评论评论评论评论评论评论评论评论评论评论评论评论评论评论评论评论评论评论评论评论评论评论评论评论评论评论评论评论评论评论评论评论评论评论评论评论评论评论评论评论评论评论评论评论评论评论评论评论评论评论评论评论
+                </div>
+                <div class="comment-del">删除</div>
+                <div class="comment-time">2023-7-5 15:11</div>
+              </li> -->
+            </ul>
+            <div class="comment-publish">
+              <div class="userinfo">
+                <div class="user_face faceStyle">
+                  <img src="../node/public/upload/face.png" alt="" />
+                </div>
+                <div class="user_name nameStyle">游客</div>
+              </div>
+              <form action="javascript:;" id="commentForm">
+                <textarea
+                  name="comment"
+                  placeholder="发布一条友善的评论"
+                ></textarea>
+                <button class="send btn">发布</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- 导入全局配置文件 -->
+    <script src="utils/request.js"></script>
+    <!-- 导入文章页js文件 -->
+    <script src="js/article.js"></script>
+  </body>
+</html>

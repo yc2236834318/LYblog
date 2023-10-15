@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>用户页</title>
+    <!-- 导入基础样式 -->
+    <link rel="stylesheet" href="css/base.css" />
+    <!-- 导入公共样式 -->
+    <link rel="stylesheet" href="css/common.css" />
+    <!-- 导入用户页样式 -->
+    <link rel="stylesheet" href="css/user.css" />
+    <!-- 导入axios模块 -->
+    <script src="js/axios.js"></script>
+    <!-- 导入表单插件 -->
+    <script src="js/form-serialize.js"></script>
+    <!-- 导入弹窗模块 -->
+    <script src="js/alert.js"></script>
+  </head>
+  <body>
+    <div class="wrap">
+      <div class="sub">
+        <a href="index.html">首页</a>
+        <a href="user.html" class="sub-active">个人中心</a>
+        <a href="publish.html">发布文章</a>
+        <a href="manage.html">文章管理</a>
+        <a href="collect.html">我的收藏</a>
+        <a href="follow.html">我的关注</a>
+      </div>
+      <div class="main">
+        <div class="top">
+          <div class="right">
+            <div class="face">
+              <a href="user.html">
+                <img src="../node/public/upload/face.png" alt="" />
+                <span class="nickname">游客</span>
+              </a>
+            </div>
+            <ul class="panel">
+              <li><a href="user.html">个 人 中 心</a></li>
+              <li><a href="publish.html">文 章 发 布</a></li>
+              <li><a href="manage.html">文 章 管 理</a></li>
+              <li><a href="collect.html">我 的 收 藏</a></li>
+              <li><a href="follow.html">我 的 关 注</a></li>
+              <li class="exit"><a href="javascript:;">退 出 登 录</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="content">
+          <div class="card">
+            <div class="userinfo">
+              <div class="img-box">
+                <img src="../node/public/upload/face.png" alt="" />
+              </div>
+              <div class="nickname">游客</div>
+            </div>
+            <div class="update">
+              <ul class="update-list">
+                <li data-index="1">修改昵称</li>
+                <li data-index="2">修改密码</li>
+                <li data-index="3">修改头像</li>
+                <li data-index="4">我的文章</li>
+                <li data-index="5">我的收藏</li>
+                <li data-index="6">我的关注</li>
+              </ul>
+              <div class="container">
+                <form
+                  action="javascript:;"
+                  id="userinfo"
+                  enctype="multipart/form-data"
+                >
+                  <div class="box">
+                    <span>昵称修改</span>
+                    <input
+                      type="text"
+                      name="nickname"
+                      placeholder="请输入昵称"
+                      autocomplete="off"
+                    />
+                    <button class="send nickBtn">修改</button>
+                    <p class="tip nicktip">*请输入2-12个字符</p>
+                  </div>
+                  <div class="box">
+                    <span>密码修改</span>
+                    <input
+                      type="text"
+                      name="oldpsw"
+                      placeholder="请输入旧密码"
+                      autocomplete="off"
+                    />
+                    <input
+                      type="text"
+                      name="newpsw"
+                      placeholder="请输入新密码"
+                      autocomplete="off"
+                    />
+                    <button class="send pswBtn">修改</button>
+                    <p class="tip pswtip"></p>
+                  </div>
+                  <div class="box">
+                    <span>头像修改</span>
+                    <label for="form-file" class="place">+</label>
+                    <input type="file" name="user_pic" id="form-file" />
+                    <img class="cover" />
+                    <button class="send faceBtn">修改</button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- 导入全局配置文件 -->
+    <script src="utils/request.js"></script>
+    <!-- 导入令牌验证文件 -->
+    <script src="utils/auth.js"></script>
+    <!-- 导入用户页js文件 -->
+    <script src="js/user.js"></script>
+  </body>
+</html>

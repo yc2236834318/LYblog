@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>关注页</title>
+    <!-- 导入基础样式 -->
+    <link rel="stylesheet" href="css/base.css" />
+    <!-- 导入公共样式 -->
+    <link rel="stylesheet" href="css/common.css" />
+    <!-- 导入关注页样式 -->
+    <link rel="stylesheet" href="css/follow.css" />
+    <!-- 导入axios模块 -->
+    <script src="js/axios.js"></script>
+    <!-- 导入弹窗模块 -->
+    <script src="js/alert.js"></script>
+  </head>
+  <body>
+    <div class="wrap">
+      <div class="sub">
+        <a href="index.html">首页</a>
+        <a href="user.html">个人中心</a>
+        <a href="publish.html">发布文章</a>
+        <a href="manage.html">文章管理</a>
+        <a href="collect.html">我的收藏</a>
+        <a href="follow.html" class="sub-active">我的关注</a>
+      </div>
+      <div class="main">
+        <div class="top">
+          <div class="right">
+            <div class="face">
+              <a href="user.html">
+                <img src="../node/public/upload/face.png" alt="" />
+                <span class="nickname">游客</span>
+              </a>
+            </div>
+            <ul class="panel">
+              <li><a href="user.html">个 人 中 心</a></li>
+              <li><a href="publish.html">文 章 发 布</a></li>
+              <li><a href="manage.html">文 章 管 理</a></li>
+              <li><a href="collect.html">我 的 收 藏</a></li>
+              <li><a href="follow.html">我 的 关 注</a></li>
+              <li class="exit"><a href="javascript:;">退 出 登 录</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="container">
+          <div class="card">
+            <div class="card-title">关注用户</div>
+            <div class="follow">
+              <div class="tip">暂 无 数 据</div>
+              <ul class="follow-list">
+                <!-- <li>
+                  <a href="javascript:;">
+                    <div class="face-img">
+                      <img src="../node/public/upload/face.png" alt="" />
+                    </div>
+                    <div><div class="author-name">用户</div></div>
+                    <button class="followBtn btn">已关注</button>
+                  </a>
+                </li> -->
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- 导入全局配置文件 -->
+    <script src="utils/request.js"></script>
+    <!-- 导入令牌验证文件 -->
+    <script src="utils/auth.js"></script>
+    <!-- 导入关注页js文件 -->
+    <script src="js/follow.js"></script>
+  </body>
+</html>

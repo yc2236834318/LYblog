@@ -1,0 +1,313 @@
+body {
+  background-color: #eee;
+}
+.top {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: 60px;
+  padding: 0 20px;
+  color: #fff;
+  line-height: 60px;
+  background-color: #002233;
+}
+.top .none a {
+  color: #fff;
+}
+.top .none a:hover {
+  color: dodgerblue;
+}
+.top .left {
+  color: #fff;
+  cursor: pointer;
+}
+.top .right {
+  position: relative;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+.top .right .face {
+  color: #fff;
+}
+.top .right .face img {
+  width: 40px;
+  border-radius: 50%;
+}
+.top .right .nickname {
+  display: inline-block;
+  width: 100px;
+  padding: 0 5px;
+  vertical-align: middle;
+  /* 文本省略 */
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.top .right .face:hover {
+  color: dodgerblue;
+}
+.top .right .panel {
+  display: none;
+  position: absolute;
+  top: 60px;
+  left: 0;
+  z-index: 999;
+  width: 140px;
+  padding: 10px 0;
+  border: 1px solid #eee;
+  background-color: #fff;
+  text-align: center;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+.top .right .panel li {
+  width: 100%;
+  height: 30px;
+  line-height: 30px;
+}
+.top .right .panel li a {
+  display: block;
+  font-weight: bold;
+  color: #002233;
+}
+.top .right .panel li a:hover {
+  color: #fff;
+  background-color: #002233;
+}
+.nav {
+  width: 100%;
+  height: 60px;
+  background-color: #fff;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+.search {
+  width: 60%;
+  height: 35px;
+  margin: 0 auto;
+  padding-top: 12px;
+  text-align: center;
+}
+.search input {
+  width: 70%;
+  height: 35px;
+  padding-left: 10px;
+  padding-right: 10px;
+  font-size: 12px;
+  border: 2px solid #002233;
+  border-right: none;
+  border-radius: 20px 0 0 20px;
+}
+.search .searchBtn {
+  position: relative;
+  left: -5px;
+  width: 10%;
+  height: 35px;
+  padding: 5px 10px;
+  color: #fff;
+  border: none;
+  border-radius: 0 20px 20px 0;
+  background-color: #002233;
+  vertical-align: middle;
+  cursor: pointer;
+}
+.container {
+  position: relative;
+  width: 1368px;
+  min-height: 400px;
+  margin: 0 auto;
+  padding: 20px 30px;
+}
+.container .card {
+  position: relative;
+  margin-bottom: 30px;
+  padding: 20px;
+  border: 1px solid #ebeef5;
+  border-radius: 10px;
+  box-shadow: 0 2px 12px 0 rgb(0 0 0 / 10%);
+  background-color: #fff;
+}
+.card .card-title {
+  height: 50px;
+  color: #002233;
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 50px;
+  border-bottom: 1px solid #ebeef5;
+}
+.author-list {
+  display: flex;
+  flex-wrap: wrap;
+  min-height: 100px;
+  padding: 20px;
+}
+.author-list li {
+  width: 15%;
+  margin-right: 30px;
+  margin-bottom: 20px;
+  padding: 10px;
+  border: 2px solid dodgerblue;
+  border-radius: 20px;
+}
+.author-list li:nth-of-type(4n) {
+  margin-right: 0;
+}
+.author-list li a {
+  color: #795548;
+}
+.author-list li .face-img {
+  overflow: hidden;
+  float: left;
+  width: 40px;
+  margin-right: 10px;
+  border-radius: 50%;
+}
+.author-list li .author-name {
+  float: left;
+  width: 100px;
+  height: 40px;
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 40px;
+  /* 文本省略 */
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.empty {
+  display: none;
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  margin: 0 auto;
+  color: #002233;
+  font-size: 30px;
+  font-weight: bold;
+  transform: translate(-50%);
+}
+.article-list {
+  display: flex;
+  flex-wrap: wrap;
+  min-height: 100px;
+  padding: 20px;
+}
+.article-list li {
+  overflow: hidden;
+  width: 23%;
+  height: 300px;
+  margin-right: 32px;
+  margin-bottom: 30px;
+  background-color: #fff;
+  border-radius: 20px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.article-list li:nth-of-type(4n) {
+  margin-right: 0;
+}
+.li-hover {
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2) !important;
+}
+.time {
+  font-size: 12px;
+  color: #959595;
+}
+.img-box {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  height: 170px;
+  margin: 0 auto;
+}
+.img-box img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: all 0.6s;
+}
+.content .title {
+  width: 100%;
+  height: 50px;
+  padding: 0 20px;
+  color: #535353;
+  font-weight: bold;
+  line-height: 50px;
+  /* 文本省略 */
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.details {
+  overflow: hidden;
+  padding: 0 30px;
+  font-size: 14px;
+}
+.details .face-box {
+  overflow: hidden;
+  float: left;
+  width: 50px;
+  margin-right: 10px;
+  border-radius: 50%;
+}
+.details .author {
+  float: left;
+  width: 100px;
+  color: #795548;
+  font-weight: bold;
+  line-height: 50px;
+  text-align: left;
+  /* 文本省略 */
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.details .tag {
+  float: right;
+  height: 30px;
+  margin-top: 10px;
+  padding: 0 10px;
+  color: #fff;
+  line-height: 30px;
+  font-size: 12px;
+  border-radius: 5px;
+  /* background-color: #ff5722; */
+}
+.author-list .author-empty {
+  /* display: none; */
+  margin: 0 auto;
+  padding: 0;
+  border: none;
+  color: #002233;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+/* 分区样式 */
+.news {
+  background-color: crimson;
+}
+.game {
+  background-color: dodgerblue;
+}
+.history {
+  background-color: rgb(122, 24, 24);
+}
+.sport {
+  background-color: blueviolet;
+}
+.finance {
+  background-color: rgb(239, 186, 53);
+}
+.tourism {
+  background-color: rgb(10, 170, 10);
+}
+.movie {
+  background-color: hotpink;
+}
+.delicacy {
+  background-color: #ff5722;
+}

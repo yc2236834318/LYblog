@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>管理页</title>
+    <!-- 导入基础样式 -->
+    <link rel="stylesheet" href="css/base.css" />
+    <!-- 导入公共样式 -->
+    <link rel="stylesheet" href="css/common.css" />
+    <!-- 导入管理页样式 -->
+    <link rel="stylesheet" href="css/manage.css" />
+    <!-- 导入axios模块 -->
+    <script src="js/axios.js"></script>
+    <!-- 导入表单插件 -->
+    <script src="js/form-serialize.js"></script>
+    <!-- 导入弹窗模块 -->
+    <script src="js/alert.js"></script>
+  </head>
+  <body>
+    <div class="wrap">
+      <div class="sub">
+        <a href="index.html">首页</a>
+        <a href="user.html">个人中心</a>
+        <a href="publish.html">发布文章</a>
+        <a href="manage.html" class="sub-active">文章管理</a>
+        <a href="collect.html">我的收藏</a>
+        <a href="follow.html">我的关注</a>
+      </div>
+      <div class="main">
+        <div class="top">
+          <div class="right">
+            <div class="face">
+              <a href="user.html">
+                <img src="../node/public/upload/face.png" alt="" />
+                <span class="nickname">游客</span>
+              </a>
+            </div>
+            <ul class="panel">
+              <li><a href="user.html">个 人 中 心</a></li>
+              <li><a href="publish.html">文 章 发 布</a></li>
+              <li><a href="manage.html">文 章 管 理</a></li>
+              <li><a href="collect.html">我 的 收 藏</a></li>
+              <li><a href="follow.html">我 的 关 注</a></li>
+              <li class="exit"><a href="javascript:;">退 出 登 录</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="content">
+          <div class="card">
+            <div class="title">我的文章</div>
+            <form
+              action="javascript:;"
+              id="articleForm"
+              enctype="multipart/form-data"
+            >
+              <div class="box">
+                <span>文章分区: </span>
+                <select name="cate_id" class="form-select">
+                  <option value="" selected>请选择文章分区</option>
+                </select>
+              </div>
+            </form>
+          </div>
+          <div class="card">
+            <table>
+              <thead>
+                <tr>
+                  <th>封面</th>
+                  <th>标题</th>
+                  <th>分区</th>
+                  <th>发布时间</th>
+                  <th>操作</th>
+                </tr>
+              </thead>
+              <tbody class="article-list">
+                <tr>
+                  <td>
+                    <a href="javascript:;" class="img-box">
+                      <img src="../node/public/upload/article.jpeg" alt="" />
+                    </a>
+                  </td>
+                  <td><a href="javascript:;" class="artTitle">文章标题</a></td>
+                  <td><span class="artPlate">文章分区</span></td>
+                  <td>
+                    <span>2023-04-27 10:59:34</span>
+                  </td>
+                  <td>
+                    <a href="javascript:;" class="edit">编辑</a>
+                    <a href="javascript:;" class="del">删除</a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <a href="javascript:;" class="img-box">
+                      <img src="../node/public/upload/article.jpeg" alt="" />
+                    </a>
+                  </td>
+                  <td><a href="javascript:;" class="artTitle">文章标题</a></td>
+                  <td><span class="artPlate">文章分区</span></td>
+                  <td>
+                    <span>2023-04-27 10:59:34</span>
+                  </td>
+                  <td>
+                    <a href="javascript:;" class="edit">编辑</a>
+                    <a href="javascript:;" class="del">删除</a>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <!-- 分页器 -->
+            <ul class="pagination">
+              <li class="page last">
+                <span>&laquo;</span>
+              </li>
+              <li class="now">第 <span>1</span> 页</li>
+              <li class="page next">
+                <span>&raquo;</span>
+              </li>
+              <li class="total">共 <span>0</span> 页</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- 导入全局配置文件 -->
+    <script src="utils/request.js"></script>
+    <!-- 导入令牌验证文件 -->
+    <script src="utils/auth.js"></script>
+    <!-- 导入管理页js文件 -->
+    <script src="js/manage.js"></script>
+  </body>
+</html>

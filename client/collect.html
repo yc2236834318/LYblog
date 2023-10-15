@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>收藏页</title>
+    <!-- 导入基础样式 -->
+    <link rel="stylesheet" href="css/base.css" />
+    <!-- 导入公共样式 -->
+    <link rel="stylesheet" href="css/common.css" />
+    <!-- 导入收藏页样式 -->
+    <link rel="stylesheet" href="css/collect.css" />
+    <!-- 导入axios模块 -->
+    <script src="js/axios.js"></script>
+    <!-- 导入弹窗模块 -->
+    <script src="js/alert.js"></script>
+  </head>
+  <body>
+    <div class="wrap">
+      <div class="sub">
+        <a href="index.html">首页</a>
+        <a href="user.html">个人中心</a>
+        <a href="publish.html">发布文章</a>
+        <a href="manage.html">文章管理</a>
+        <a href="collect.html" class="sub-active">我的收藏</a>
+        <a href="follow.html">我的关注</a>
+      </div>
+      <div class="main">
+        <div class="top">
+          <div class="right">
+            <div class="face">
+              <a href="user.html">
+                <img src="../node/public/upload/face.png" alt="" />
+                <span class="nickname">游客</span>
+              </a>
+            </div>
+            <ul class="panel">
+              <li><a href="user.html">个 人 中 心</a></li>
+              <li><a href="publish.html">文 章 发 布</a></li>
+              <li><a href="manage.html">文 章 管 理</a></li>
+              <li><a href="collect.html">我 的 收 藏</a></li>
+              <li><a href="follow.html">我 的 关 注</a></li>
+              <li class="exit"><a href="javascript:;">退 出 登 录</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="container">
+          <div class="card">
+            <div class="userinfo">
+              <div class="face-img">
+                <img src="../node/public/upload/face.png" alt="" />
+              </div>
+              <div class="nickname">游客</div>
+            </div>
+            <div class="article">
+              <div class="tip">暂 无 数 据</div>
+              <ul class="article-list">
+                <!-- <li>
+                  <a href="javascript:;">
+                    <div class="img-box">
+                      <img src="../node/public/upload/article.jpeg" alt="" />
+                    </div>
+                    <div class="content">
+                      <div class="title">文章标题</div>
+                      <div class="details">
+                        <div class="face-box">
+                          <img src="../node/public/upload/face.png" alt="" />
+                        </div>
+                        <div class="author">作者名字</div>
+                        <div class="tag">文章类别</div>
+                      </div>
+                      <p class="time">2023-6-27</p>
+                    </div>
+                  </a>
+                </li> -->
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- 导入全局配置文件 -->
+    <script src="utils/request.js"></script>
+    <!-- 导入令牌验证文件 -->
+    <script src="utils/auth.js"></script>
+    <!-- 导入收藏页js文件 -->
+    <script src="js/collect.js"></script>
+  </body>
+</html>

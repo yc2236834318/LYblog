@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>登录</title>
+    <!-- 导入基础样式 -->
+    <link rel="stylesheet" href="css/base.css" />
+    <!-- 导入公共样式 -->
+    <link rel="stylesheet" href="css/common.css" />
+    <!-- 导入登录页样式 -->
+    <link rel="stylesheet" href="css/login.css" />
+    <!-- 导入axios模块 -->
+    <script src="js/axios.js"></script>
+    <!-- 导入表单插件 -->
+    <script src="js/form-serialize.js"></script>
+    <!-- 导入弹窗模块 -->
+    <script src="js/alert.js"></script>
+  </head>
+  <body>
+    <div class="top">
+      <a href="index.html" class="left">泠羽博客</a>
+    </div>
+    <div class="login">
+      <div class="title">用户登录</div>
+      <div class="box">
+        <form id="log" action="/api/login" target="_blank" method="post">
+          <ul>
+            <li>
+              <input
+                type="text"
+                name="username"
+                placeholder="请输入用户名"
+                autocomplete="off"
+              />
+            </li>
+            <li class="psw">
+              <input type="password" name="password" placeholder="请输入密码" />
+              <span class="iconfont eye">&#xe633;</span>
+            </li>
+          </ul>
+          <p class="remember">
+            <input type="checkbox" class="cbox" id="cbox" />
+            <label for="cbox">记住账号</label>
+          </p>
+          <button type="submit" class="btn">登 录</button>
+        </form>
+        <p class="link">没有账号？去 <a href="register.html">注册</a></p>
+      </div>
+    </div>
+    <script src="js/login.js"></script>
+  </body>
+</html>

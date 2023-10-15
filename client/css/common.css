@@ -1,0 +1,61 @@
+/* 字体图标 */
+@font-face {
+  font-family: "iconfont";
+  src: url("../icon-font/iconfont.ttf") format("truetype");
+}
+.iconfont {
+  font-family: "iconfont" !important;
+  font-style: normal;
+  font-weight: normal;
+  font-display: block;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 40px;
+  color: dodgerblue;
+}
+/* 弹窗样式 */
+.alert {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  z-index: 999;
+  min-width: 100px;
+  height: 50px;
+  padding: 0 20px;
+  line-height: 50px;
+  transform: translate(-50%, -50%);
+  background: rgba(105, 101, 101, 0.9);
+  color: #fff;
+  font-size: 16px;
+  border-radius: 10px;
+  text-align: center;
+}
+/* 出现隐藏动画 */
+@keyframes shows {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes hides {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+.alertShow {
+  animation: shows 0.2s forwards;
+}
+.alertHide {
+  animation: hides 0.2s forwards;
+}
+.show {
+  display: inline-block !important;
+}
+.hide {
+  display: none !important;
+}

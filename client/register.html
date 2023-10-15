@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>注册</title>
+    <!-- 导入基础样式 -->
+    <link rel="stylesheet" href="css/base.css" />
+    <!-- 导入公共样式 -->
+    <link rel="stylesheet" href="css/common.css" />
+    <!-- 导入注册页样式 -->
+    <link rel="stylesheet" href="css/register.css" />
+    <!-- 导入axios模块 -->
+    <script src="js/axios.js"></script>
+    <!-- 导入弹窗模块 -->
+    <script src="js/alert.js"></script>
+  </head>
+  <body>
+    <div class="top">
+      <a href="index.html" class="left">泠羽博客</a>
+    </div>
+    <div class="register">
+      <div class="title">用户注册</div>
+      <div class="box">
+        <form id="reg" action="/api/reguser" target="_blank" method="post">
+          <ul>
+            <li>
+              <input
+                type="text"
+                name="username"
+                placeholder="请输入用户名"
+                autocomplete="off"
+              />
+              <p class="tips"></p>
+            </li>
+            <li class="psw">
+              <input type="password" name="password" placeholder="请输入密码" />
+              <p class="tips"></p>
+              <p class="strength">
+                密码强度:
+                <span class="strong">强</span>
+                <span class="medium">中</span>
+                <span class="weak">弱</span>
+              </p>
+            </li>
+            <li>
+              <input type="password" name="psw" placeholder="请再次输入密码" />
+              <p class="tips"></p>
+            </li>
+          </ul>
+          <p class="protocol">
+            <input type="checkbox" class="cbox" />
+            已阅读并同意<span>《用户服务协议》</span>
+          </p>
+          <button type="submit" class="btn">注 册</button>
+        </form>
+        <p class="link">已有账号？去 <a href="login.html">登录</a></p>
+      </div>
+    </div>
+    <script src="js/register.js"></script>
+  </body>
+</html>
